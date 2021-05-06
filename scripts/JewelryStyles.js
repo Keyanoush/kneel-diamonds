@@ -6,8 +6,8 @@ document.addEventListener(
     "change",
     (event) => {
         if (event.target.name === "style") {
-            const [, inputId ] = event.target.value.split("--")
-            setStyle(parseInt(inputId)) 
+            const [, styleId ] = event.target.value.split("--")
+            setStyle(parseInt(styleId)) 
         }
     }
 )
