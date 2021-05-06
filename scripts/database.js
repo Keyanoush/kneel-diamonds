@@ -56,7 +56,7 @@ export const addCustomOrder = () => {
     }
 
     newOrder.id =
-        database.orders[length] > 0 ? [...database.customOrders].pop().id + 1 : 1;
+        database.customOrders.length > 0 ? [...database.customOrders].pop().id + 1 : 1;
     newOrder.timestamp = Date.now();
 
     database.customOrders.push(newOrder);
@@ -76,11 +76,11 @@ export const getMetals = () => {
     return [...database.metals]
 }
 export const getSizes = () => {
-    return [...database.metals]
+    return [...database.sizes]
 }
 export const getStyles = () => {
-    return [...database.metals]
+    return [...database.styles]
 }
 export const getOrders = () => {
-    return [...database.metals]
+    return [...database.customOrders]
 }
